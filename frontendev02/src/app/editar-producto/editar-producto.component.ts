@@ -29,7 +29,9 @@ export class EditarProductoComponent {
 
 onSubmit(){
   const response = this.productoService.updateProduct(this.form.value, this.id);
+  setTimeout(() => {
+    this.router.navigate(['/productos']);
+  }, 2000);
 
-  this.router.navigate(['/productos']);
 }
 }
